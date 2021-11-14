@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"></meta>
+    <title>"Pika Park"</title>
+    <link rel="stylesheet" href="parks.css">
+</head>
+<body>
+    <div id="heading">
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="parks.html" class="active">Parks</a>
+            <a href="cams.html">Cams</a>
+            <a href="about.html">About</a>
+        </div>
+        <div id="banner"></div>
+        <div class="searchnav">
+            <a class="collapsible" id="collapsible" onclick="toggleActivities()">Activities</a>
+        </div>
+        <div class="content" id="activities">
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Arts and Culture">Arts and Culture
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Astronomy">Astronomy
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Auto and ATV">Auto and ATV
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Biking">Biking
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Boating" onclick="getParks()">Boating
+                        <input type="checkbox" name="activities"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Camping" onclick="getParks()">Camping
+                        <input type="checkbox" name="activities"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Canyoneering">Canyoneering
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container"  id="Caving">Caving
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Climbing">Climbing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Compass and GPS">Compass and GPS
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Dog Sledding">Dog Sledding
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Fishing">Fishing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Flying">Flying
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Food">Food
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Golfing">Golfing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Guided Tours">Guided Tours
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Hands-On">Hands-On
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Hiking">Hiking
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Horse Trekking">Horse Trekking
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Hunting and Gathering">Hunting and Gathering
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Ice Skating">Ice Skating
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Junior Rangers">Junior Rangers
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Living History">Living History
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Museum Exhibits">Museum Exhibits
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Paddling">Paddling
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Park Film">Park Film
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Play Ground">Play Ground
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="SCUBA Diving">SCUBA Diving
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Shopping">Shopping
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Skiing">Skiing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div> 
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Snorkeling">Snorkeling
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Snow Play">Snow Play
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Snowmobiling">Snowmobiling
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Surfing">Surfing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Swimming">Swimming
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Team Sports">Team Sports
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="Tubing">Tubing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Water Skiing">Water Skiing
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="Wildlife Watching">Wildlife Watching
+                        <input type="checkbox" name="activities" onclick="getParks()"> <span class="checkmark"></span>
+                    </label>
+                </div>
+              </div>     
+        </div>
+    </div>
+    <ul id="myUL">
+    </ul>
+    <script src="js/parks.js"></script>
+</body>
+</html>

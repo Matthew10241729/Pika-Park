@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"></meta>
+    <title>"Pika Park"</title>
+    <link rel="stylesheet" href="cams.css">
+</head>
+<body>
+    <div id="heading">
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="parks.html">Parks</a>
+            <a href="cams.html" class="active">Cams</a>
+            <a href="about.html">About</a>
+        </div>
+        <div id="banner"></div>
+        <div class="searchnav">
+            <a class="collapsible" id="collapsible" onclick="toggleParks()">Parks</a>
+            <a onclick="getStreams()">Get Streams</a>
+        </div>
+        <!-- There are 62 national parks but only 51 registered in the API -->
+        <div class="content" id="parks">
+            <div class="row">
+                <div class="column">
+                    <label class="container" id="acad">Acadia
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="arch">Arch
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="badl">Badlands
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="bibe">Big Bend
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="bisc">Biscayne
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="blca">Black Canyon
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="brca">Bryce Canyon
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="cany">Canyonlands
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="care">Capitol Reef
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="cave">Carlsbad Caverns
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="chis">Channel Islands
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="cong">Congaree
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="crla">Crater Lake
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="cuva">Cuyahoga
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="deva">Death Valley
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="drto">Dry Tortugas
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="ever">Everglades
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="jeff">Gateway Arch
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="glac">Glacier
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="grca">Grand Canyon
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="grte">Grand Teton
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="grba">Great Basin
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="grsm">Smokey Moutains
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="gumo">Guadalupe Mountains
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="hale">Haleakala 
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="havo">Hawai'i Volcanoes
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="hasp">Hot Springs 
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="indu">Indiana Dunes
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="isro">Isle Royale
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="jotr">Joshua Tree
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="kefj">Kenai Fjords
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="kova">Kobuk Valley
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="lavo">Lassen Volcanic
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="maca">Mammoth Cave 
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="meve">Mesa Verde
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="mora">Mount Rainer
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="noca">North Cascades
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="olym">Olympic
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="pefo">Petrified Forest
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="pinn">Pinnacles
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="romo">Rocky Mountain
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="sagu">Saguaro
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id=shen"">Shenandoah
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="thro">Theodore Roosevelt
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="viis">Virgin Island
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="column">
+                    <label class="container" id="voya">Voyaguers
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="whsa">White Sands
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="wica">Wind Cave
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="yell">Yellowstone
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="yose">Yosemite
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                    <label class="container" id="zion">Zion
+                        <input type="checkbox" name="parks"> <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    <ul id="myUL">
+    </ul>
+    <script src="js/cams.js"></script>
+</body>
+</html>
